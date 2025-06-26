@@ -1,0 +1,90 @@
+.hero,
+.about,
+.skills,
+.projects
+{
+    width: 100%;
+    height: 800px;
+}
+.about,
+.contacts
+{
+    height: 500px;
+}
+.hero .hero_info,
+.about .about_info,
+.projects .projects_info,
+.contacts .contacts_info
+{
+    height: 100%;
+    display: flex;
+    gap: 40px;
+}
+.about .about_info,
+.skills .skills_info,
+.projects .projects_info,
+.contacts .contacts_info
+{
+    width: 980px; 
+    height: 330px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.hero .hero_info .info,
+.about .about_info .info,
+.skills .skills_info .info,
+.projects .projects_info .info
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.about .about_info .info p
+{
+    color: var(--text);
+    font-size: 20px;
+}
+.hero .avatar,
+.about .avatar
+{
+    display: flex;
+    align-items: center;
+}
+.hero .avatar img,
+.about .avatar img
+{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+.about .avatar img
+{
+    width: 280px;
+    height: 280px;
+}
+.skills .skills_info .info img
+{
+    width: 80px;
+    height: 80px;
+}
+/* Начальное состояние (до скролла) */
+.about .info.animate-left,
+.about .avatar.animate-right {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+.about .avatar.animate-right {
+  transform: translateX(60px);
+}
+
+/* После появления */
+.about .info.animate-left.show,
+.about .avatar.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}

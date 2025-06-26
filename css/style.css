@@ -1,0 +1,274 @@
+:root
+{
+    --black: #000;
+    --text: #fff;
+    --text-color: #fff;
+    --background: #0c1118;
+    --aqua: #00aac9;
+    --darkAqua: #00859d;
+    --colorBox: #131b22;
+    --darkcolorBox: #00859d;
+}
+.light-theme {
+    --black: #000;
+    --text: #0c1118;
+    --background: #f1f6fa;
+    --text-color: #000;
+    --aqua: #00aac9;
+    --darkAqua: #00859d;
+    --colorBox: #d3d9de;
+    --darkcolorBox: #00859d;
+}
+@font-face {
+    font-family: "Euclid-Square";
+    src: url(../font/Euclid-Square/Euclid-Square.ttf);
+}
+*
+{
+    font-family: 'Euclid-Square';
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: var(--background);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+::-webkit-scrollbar
+{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: var(--aqua);
+    border-radius: 5px;
+}
+.margin
+{
+    height: 150px;
+}
+.box,
+.box_hero,
+.box_skills,
+.box_projects,
+.box_contacts
+{
+    background-color: var(--colorBox);
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 15px 0 var(--black);
+}
+.box_hero
+{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+.box_skills
+{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    transition-delay: var(--delay, 0s);
+}
+.box_projects 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 552px;
+    height: 600px;
+    background-color: var(--colorBox);
+    border-radius: 20px;
+    box-shadow: 0 0 15px var(--black);
+    padding: 20px;
+}
+.box_projects img
+{
+    object-fit: cover;
+    border-radius: 10px;
+}
+.box_contacts
+{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.6s ease;
+    transition-delay: var(--delay, 0s);
+}
+.box_hero.show,
+.box_skills.show,
+.box_contacts.show
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-text 
+{
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+.fade-text.show 
+{
+  opacity: 1;
+}
+.box img
+{
+    object-fit: cover;
+}
+.btn
+{
+    padding: 10px 20px;
+    background-color: var(--aqua);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    border: 0;
+    transition: 0.5s;
+}
+.btn:hover
+{
+    background-color: var(--darkcolorBox);
+}
+.btn:active
+{
+    transform: scale(0.98);
+}
+.modal 
+{
+  display: none;
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--colorBox);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 0 20px var(--black);
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+.modal .close 
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text);
+    cursor: pointer;
+}
+.modal .close img
+{
+    width: 35px;
+    height: 35px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.modal .close img:hover
+{
+    opacity: 1;
+}
+.modal .close img:active
+{
+    transform: scale(0.98);
+}
+.modal .modal-left
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.modal .modal-right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--darkAqua);
+    border-radius: 20px;
+}
+.modal .modal-right img
+{
+    width: 300px;
+}
+
+@keyframes fadeIn 
+{
+    from {opacity: 0; transform: translateY(50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+.carousel-container 
+{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.carousel-container.show 
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+.carousel-track 
+{
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+  padding: 10px 0 10px 10px;
+}
+.carousel-btn 
+{
+  position: absolute;
+  top: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px 15px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.carousel-btn.prev 
+{
+  left: 10px;
+}
+.carousel-btn.next 
+{
+  right: 0;
+}
+.carousel-btn.prev img,
+.carousel-btn.next img
+{
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+}
+.carousel-btn.prev img:hover,
+.carousel-btn.next img:hover
+{
+    filter: drop-shadow(0px 0px 10px var(--text));
+}
