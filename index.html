@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Web developer Artem Gumenyuk — portfolio, contacts, resume</title>
 </head>
 <body>
@@ -15,9 +16,9 @@
         <div class="menu_box">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
+                <img src="img/icons/white/bars-solid.png" alt="" data-icon="bars-solid">
             </label>
-            <label class="logo"><img src="img/logo.png" alt="logo"></label>
+            <label for="" class="logo"><img src="img/logo.png" alt="logo"></label>
             <ul>
                 <li class="menu_list lang-en"><a href="#aboutMe">About me</a></li>  
                 <li class="menu_list lang-en"><a href="#skills">Skills</a></li> 
@@ -42,15 +43,15 @@
     </nav>
     <div class="hero">
         <div class="margin"></div>
-        <div class="box_hero" style="width: 980px; height: 480px; margin-left: auto; margin-right: auto; padding: 40px;">
+        <div class="box_hero">
             <div class="hero_info">
                 <div class="info">
-                    <h1 class="lang-en" style="font-size: 90px; text-transform: uppercase; font-weight: 500;">Artem Gumenuk</h1>
-                    <h1 class="lang-ru" style="font-size: 90px; text-transform: uppercase; font-weight: 500; display: none;">Артём Гуменюк</h1>
-                    <h2 class="lang-en" style="font-size: 55px; text-transform: uppercase; color: var(--aqua); font-weight: 400; letter-spacing: 2px;">Web Developer</h2>
-                    <h2 class="lang-ru" style="font-size: 55px; display: none; text-transform: uppercase; color: var(--aqua); font-weight: 400; letter-spacing: 2px;">Веб Разработчик</h2>
-                    <a href="#projects" class="lang-en"><button class="btn" style="font-size: 20px;">View My Works</button></a>
-                    <a href="#projects" class="lang-ru" style="display: none;"><button class="btn" style="font-size: 20px;">Посмотреть Мои работы</button></a>
+                    <h1 class="lang-en">Artem Gumenuk</h1>
+                    <h1 class="lang-ru" style="display: none;">Артём Гуменюк</h1>
+                    <h2 class="lang-en">Web Developer</h2>
+                    <h2 class="lang-ru" style="display: none;">Веб Разработчик</h2>
+                    <a href="#projects" class="lang-en"><button class="btn">My Works</button></a>
+                    <a href="#projects" class="lang-ru" style="display: none;"><button class="btn">Мои работы</button></a>
                 </div>
                 <div class="avatar">
                     <img src="img/avatar.jpg" alt="avatar">
@@ -60,9 +61,9 @@
     </div>
     <div class="about" id="aboutMe">
         <div class="about_info">
-            <div class="info animate-left" style="padding: 0 30px 0 0;">
-                <h1 class="lang-en" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px;">About me</h1>
-                <h1 class="lang-ru" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px; display: none;">Обо мне</h1>
+            <div class="info animate-left">
+                <h1 class="lang-en">About me</h1>
+                <h1 class="lang-ru" style="display: none;">Обо мне</h1>
                 <div style="display: flex;">
                     <div class="info" style="padding: 0 30px 0 0;">
                         <p class="lang-en">I am a web developer and I create websites from scratch: from design to working on the server. 
@@ -84,9 +85,9 @@
     <div class="skills" id="skills">
         <div class="skills_info">
             <div class="info" style="height: auto;">
-                <h1 class="fade-text lang-en" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Skills</h1>
-                <h1 class="fade-text lang-ru" style="text-transform: uppercase; display: none; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Навыки</h1>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 25px;">
+                <h1 class="fade-text lang-en" style="margin-bottom: 15px;">Skills</h1>
+                <h1 class="fade-text lang-ru" style="display: none; margin-bottom: 15px;">Навыки</h1>
+                <div class="skills_box">
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/html.png" alt="" data-icon="html"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/css.png" alt="" data-icon="css"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/js.png" alt="" data-icon="js"></div>
@@ -95,9 +96,9 @@
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/MySQL.png" alt="" data-icon="MySQL"></div>
                     
                 </div>
-                <h3 class="fade-text lang-en" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">In the process of studying</h3>
-                <h3 class="fade-text lang-ru" style="text-transform: uppercase; display: none; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">В процессе изучения</h3>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 25px;"">
+                <h3 class="fade-text lang-en" style="margin-bottom: 15px;">In the process of studying</h3>
+                <h3 class="fade-text lang-ru" style="display: none; margin-bottom: 15px;">В процессе изучения</h3>
+                <div class="skills_box">
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/ts.png" alt="" data-icon="ts"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/tailwindCSS.png" alt="" data-icon="tailwindCSS"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/react.png" alt="" data-icon="react"></div>
@@ -105,9 +106,9 @@
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/angular.png" alt="" data-icon="angular"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/node-js.png" alt="" data-icon="node-js"></div>
                 </div>
-                <h3 class="fade-text lang-en" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Other skills</h3>
-                <h3 class="fade-text lang-ru" style="text-transform: uppercase; display: none; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Другие навыки</h3>
-                <div style="display: flex; gap: 30px;">
+                <h3 class="fade-text lang-en" style="margin-bottom: 15px;">Other skills</h3>
+                <h3 class="fade-text lang-ru" style="display: none; margin-bottom: 15px;">Другие навыки</h3>
+                <div class="skills_box_last">
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/python.png" alt="" data-icon="python"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/CSharp.png" alt="" data-icon="CSharp"></div>
                     <div class="box_skills" style="padding: 30px;"><img src="img/icons/white/Cinema4D.png" alt="" data-icon="Cinema4D"></div>
@@ -115,40 +116,48 @@
             </div>
         </div>
     </div>
-    <div class="projects" id="projects" style="margin: 0 0 130px; height: auto;">
-        <div class="projects_info" style="height: auto; width: 980px;">
+    <div class="projects" id="projects">
+        <div class="projects_info">
             <div class="info" style="height: auto;">
-                <h1 class="fade-text lang-en" style="text-transform: uppercase; margin-left: 10px; color: var(--aqua); letter-spacing: 2px; margin-bottom: 5px;">Projects</h1>
-                <h1 class="fade-text lang-ru" style="text-transform: uppercase; margin-left: 10px; color: var(--aqua); display: none; letter-spacing: 2px; margin-bottom: 5px;">Проекты</h1>
+                <h1 class="fade-text lang-en" style="margin-left: 10px; margin-bottom: 5px;">Projects</h1>
+                <h1 class="fade-text lang-ru" style="margin-left: 10px; display: none; margin-bottom: 5px;">Проекты</h1>
                 <div class="carousel-container">
                     <button class="carousel-btn prev"><img src="img/icons/white/circle-chevron-left-solid.png" alt="" data-icon="circle-chevron-left-solid"></button>
                      <div class="carousel-track">
                         <div class="box_projects">
                             <img src="img/icons/white/plug.png" alt="" data-icon="plug">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <h3>Интернет-магазин</h3>
-                                <button class="btn">Открыть сайт</button>
+                            <div class="box_projects_info">
+                                <h3 class="lang-en">Online Store</h3>
+                                <h3 class="lang-ru" style="display: none;">Интернет-магазин</h3>
+                                <button class="btn lang-en">Open a website</button>
+                                <button class="btn lang-ru" style="display: none;">Открыть сайт</button>
                             </div>
                         </div>
                         <div class="box_projects">
                             <img src="img/icons/white/plug.png" alt="" data-icon="plug">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <h3>API-проект (REST / GraphQL)</h3>
-                                <button class="btn">Открыть сайт</button>
+                            <div class="box_projects_info">
+                                <h3 class="lang-en">API project (REST / GraphQL)</h3>
+                                <h3 class="lang-ru" style="display: none;">API-проект (REST / GraphQL)</h3>
+                                <button class="btn lang-en">Open a website</button>
+                                <button class="btn lang-ru" style="display: none;">Открыть сайт</button>
                             </div>
                         </div>
                         <div class="box_projects">
                             <img src="img/icons/white/plug.png" alt="" data-icon="plug">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <h3>Одностраничное приложение (SPA)</h3>
-                                <button class="btn">Открыть сайт</button>
+                            <div class="box_projects_info">
+                                <h3 class="lang-en">Single-page Application (SPA)</h3>
+                                <h3 class="lang-ru" style="display: none;">Одностраничное приложение (SPA)</h3>
+                                <button class="btn lang-en">Open a website</button>
+                                <button class="btn lang-ru" style="display: none;">Открыть сайт</button>
                             </div>
                         </div>
                         <div class="box_projects">
                             <img src="img/icons/white/plug.png" alt="" data-icon="plug">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <h3>Собственный pet-проект</h3>
-                                <button class="btn">Открыть сайт</button>
+                            <div class="box_projects_info">
+                                <h3 class="lang-en">Own pet project</h3>
+                                <h3 class="lang-ru" style="display: none;">Собственный pet-проект</h3>
+                                <button class="btn lang-en">Open a website</button>
+                                <button class="btn lang-ru" style="display: none;">Открыть сайт</button>
                             </div>
                         </div>
                     </div>
@@ -160,30 +169,33 @@
     <div class="contacts" id="contacts">
         <div class="contacts_info">
             <div class="info" style="height: auto; width: 100%;">
-                <h1 class="fade-text lang-en" style="text-transform: uppercase; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Contacts</h1>
-                <h1 class="fade-text lang-ru" style="text-transform: uppercase; display: none; color: var(--aqua); letter-spacing: 2px; margin-bottom: 15px;">Контакты</h1>
-                <div style="display: flex; gap: 20px;">
+                <h1 class="fade-text lang-en" style="margin-bottom: 15px;">Contacts</h1>
+                <h1 class="fade-text lang-ru" style="display: none; margin-bottom: 15px;">Контакты</h1>
+                <div class="contacts_box">
                     <div style="display: flex; gap: 20px; flex-direction: column; width: 100%;">
                         <div class="box_contacts" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-left: auto; margin-right: auto; padding: 10px">
                             <div style="display: flex; gap: 30px; align-items: center;">
                                 <img style="width: 50px; height: 50px;" src="img/icons/white/telegram.png" alt="" data-icon="telegram">
                                 <h3>@artemgumenuk</h3>
                             </div>
-                            <button class="btn">Contact</button>
+                            <button class="btn lang-en">Contact</button>
+                            <button class="btn lang-ru" style="display: none;">Контакт</button>
                         </div>
                         <div class="box_contacts" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-left: auto; margin-right: auto; padding: 10px">
                             <div style="display: flex; gap: 30px; align-items: center;">
                                 <img style="width: 50px; height: 50px;" src="img/icons/white/vk.png" alt="" data-icon="vk">
                                 <h3>@artem_gumenuk</h3>
                             </div>
-                            <a href="https://vk.com/artem_gumenuk" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-en" href="https://vk.com/artem_gumenuk" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-ru" style="display: none;" href="https://vk.com/artem_gumenuk" target="_blank"><button class="btn">Контакт</button></a>
                         </div>
                         <div class="box_contacts" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-left: auto; margin-right: auto; padding: 10px">
                             <div style="display: flex; gap: 30px; align-items: center;">
                                 <img style="width: 50px; height: 50px;" src="img/icons/white/discord.png" alt="" data-icon="discord">
                                 <h3>iDfiz</h3>
                             </div>
-                            <a href="https://discord.com/users/595189402498629637" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-en" href="https://discord.com/users/595189402498629637" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-ru" style="display: none;" href="https://discord.com/users/595189402498629637" target="_blank"><button class="btn">Контакт</button></a>
                         </div>
                     </div>
                     <div style="display: flex; gap: 20px; flex-direction: column; width: 100%;">
@@ -192,14 +204,16 @@
                                 <img style="width: 50px; height: 50px;" src="img/icons/white/github.png" alt="" data-icon="github">
                                 <h3>iDfiz</h3>
                             </div>
-                            <a href="https://github.com/iDfiz" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-en" href="https://github.com/iDfiz" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-ru" style="display: none;" href="https://github.com/iDfiz" target="_blank"><button class="btn">Контакт</button></a>
                         </div>
                         <div class="box_contacts" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-left: auto; margin-right: auto; padding: 10px">
                             <div style="display: flex; gap: 30px; align-items: center;">
                                 <img style="width: 50px; height: 50px;" src="img/icons/white/kwork.png" alt="" data-icon="kwork">
                                 <h3>iDfiz</h3>
                             </div>
-                            <a href="https://kwork.ru/user/idfiz" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-en" href="https://kwork.ru/user/idfiz" target="_blank"><button class="btn">Contact</button></a>
+                            <a class="lang-ru" style="display: none;" href="https://kwork.ru/user/idfiz" target="_blank"><button class="btn">Контакт</button></a>
                         </div>
                         <div class="box_contacts" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-left: auto; margin-right: auto; padding: 10px">
                             <div style="display: flex; gap: 30px; align-items: center;">

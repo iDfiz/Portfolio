@@ -110,10 +110,13 @@ nav a.active,nav a:hover
     font-size: 30px;
     color: #fff;
     float: right;
-    line-height: 80px;
-    margin-right: 40px;
     cursor: pointer;
     display: none;
+}
+.checkbtn img
+{
+    width: 30px;
+    height: 30px;
 }
 #check
 {
@@ -151,4 +154,42 @@ nav a.active,nav a:hover
 .language_box .show:hover
 {
     background-color: var(--darkcolorBox);
+}
+@media (max-width: 360px)
+{
+    label.logo
+    {
+        padding: 0;
+    }
+    .checkbtn 
+    {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        z-index: 999;
+    }
+    nav ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--colorBox);
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.5s ease;
+        z-index: 998;
+    }
+    #check:checked ~ ul 
+    {
+        left: 0;
+    }
+    nav ul li 
+    {
+        display: block;
+        text-align: center;
+    }
 }
