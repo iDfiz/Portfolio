@@ -155,7 +155,7 @@ nav a.active,nav a:hover
 {
     background-color: var(--darkcolorBox);
 }
-@media (max-width: 360px)
+@media (max-width: 1030px)
 {
     label.logo
     {
