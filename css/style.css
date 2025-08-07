@@ -3,23 +3,28 @@
     --black: #000;
     --text: #fff;
     --text-color: #fff;
+    --text-opacity: rgba(255, 255, 255, 0.62);
     --background: #0c1118;
     --aqua: #00aac9;
     --darkAqua: #00859d;
     --colorBox: #131b22;
     --darkcolorBox: #00859d;
+    --red: #db0000;
 }
 .light-theme {
     --black: #000;
     --text: #0c1118;
     --background: #f1f6fa;
     --text-color: #000;
+    --text-opacity: rgba(0, 0, 0, 0.62);
     --aqua: #00aac9;
     --darkAqua: #00859d;
     --colorBox: #d3d9de;
     --darkcolorBox: #00859d;
+    --red: #db0000;
 }
-@font-face {
+@font-face 
+{
     font-family: "Euclid-Square";
     src: url(../font/Euclid-Square/Euclid-Square.ttf);
 }

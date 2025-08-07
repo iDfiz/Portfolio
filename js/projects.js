@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', checkFadeIn);
-  checkFadeIn(); // на случай если уже видно
+  checkFadeIn();
 });

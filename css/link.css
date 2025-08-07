@@ -1,0 +1,160 @@
+body
+{
+    overflow-y: hidden;
+}
+.project
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    color: var(--text);
+}
+.project-info
+{
+    width: 40%;
+}
+.timer
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#timer
+{
+    position: absolute;
+    font-size: 30px;
+}
+svg 
+{
+ width: 150px;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+}
+circle 
+{
+ fill: none;
+ stroke: var(--aqua);
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+@keyframes rotate4 
+{
+ 100% 
+ {
+  transform: rotate(360deg);
+ }
+}
+@keyframes dash4 
+{
+ 0% 
+ {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+ 50% 
+ {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+ 100% 
+ {
+  stroke-dashoffset: -125px;
+ }
+}
+.project-info p
+{
+    color: var(--text-opacity);
+    margin-top: 10px;
+    font-size: 20px;
+}
+ul
+{
+    list-style: disc;
+    color: var(--text-opacity);
+}
+li
+{
+    list-style: disc;
+    margin-left: 20px;
+}
+li::marker
+{
+    color: var(--aqua);
+}
+.skills
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+.box_skills img
+{
+    width: 50px;
+}
+.warn
+{
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 2px solid var(--red);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+.warn.show 
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 480px)
+{
+    body
+    {
+        overflow-y: auto;
+    }
+    .project-info
+    {
+        width: 100%;
+        padding: 10px;
+    }
+    .timer
+    {
+        margin-top: 40px;
+    }
+    .project-info h1
+    {
+        font-size: 25px;
+    }
+    .project-info p
+    {
+        font-size: 17px;
+    }
+    .box_skills img
+    {
+        max-width: 30px;
+    }
+    .warn
+    {
+        font-size: 13px;
+    }
+}
+@media (max-width: 420px)
+{
+    .timer
+    {
+        margin-top: 300px;
+    }
+    .skills
+    {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+}

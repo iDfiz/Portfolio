@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const ruBlocks = document.querySelectorAll('.lang-ru');
 
   btnEn.onclick = () => {
-    console.log('English clicked');
+    localStorage.setItem('lang', 'en');
     enBlocks.forEach(el => el.style.display = 'block');
     ruBlocks.forEach(el => el.style.display = 'none');
     btnEn.classList.add('active');
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   btnRu.onclick = () => {
-    console.log('Russian clicked');
+    localStorage.setItem('lang', 'ru');
     enBlocks.forEach(el => el.style.display = 'none');
     ruBlocks.forEach(el => el.style.display = 'block');
     btnRu.classList.add('active');

@@ -2,7 +2,6 @@ const body = document.body;
 const toggleBtnEn = document.getElementById('theme-toggle-en');
 const toggleBtnRu = document.getElementById('theme-toggle-ru');
 
-// Функция для установки текста в зависимости от темы
 function updateThemeText(isLight) {
   toggleBtnEn.textContent = isLight ? '🌙 Dark theme' : '☀️ Light theme';
   toggleBtnRu.textContent = isLight ? '🌙 Тёмная тема' : '☀️ Светлая тема';
@@ -17,22 +16,30 @@ function updateIconsForTheme() {
   });
 }
 
-// При загрузке страницы — проверяем сохранённую тему
-if (localStorage.getItem('theme') === 'light') {
-  body.classList.add('light-theme');
-  updateThemeText(true);
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const isLight = savedTheme === 'light';
+
+  if (isLight) {
+    body.classList.add('light-theme');
+  } else {
+    body.classList.remove('light-theme');
+  }
+
+  updateThemeText(isLight);
   updateIconsForTheme();
-} else {
-  updateThemeText(false);
+}
+
+function toggleTheme() {
+  const isLight = !body.classList.contains('light-theme');
+  body.classList.toggle('light-theme');
+  updateThemeText(isLight);
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
   updateIconsForTheme();
 }
 
 [toggleBtnEn, toggleBtnRu].forEach(btn => {
-  btn.addEventListener('click', () => {
-    const isLight = !body.classList.contains('light-theme');
-    body.classList.toggle('light-theme');
-    updateThemeText(isLight);
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    updateIconsForTheme(); // вот тут
-  });
+  btn.addEventListener('click', toggleTheme);
 });
+
+window.addEventListener('DOMContentLoaded', initTheme);
