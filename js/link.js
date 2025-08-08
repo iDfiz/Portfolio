@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
       console.log('Redirecting to', project.url);
       if (seconds <= 0) {
           clearInterval(interval);
-          window.location.href = project.url; // Меняем текущую вкладку link.html на интернет-магазин
+          window.location.href = project.url + '#/'; // Меняем текущую вкладку link.html на интернет-магазин
       }
   }, 1000);
 
