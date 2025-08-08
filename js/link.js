@@ -80,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Таймер обратного отсчёта
   let seconds = 10;
+  const baseURL = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
   const timerEl = document.getElementById("timer");
 
   const interval = setInterval(() => {
@@ -89,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (seconds <= 0) {
       clearInterval(interval);
       window.open(project.url, '_blank');
-      window.location.href = "index.html";
+      window.location.href = baseURL + "index.html";
     }
   }, 1000);
 
