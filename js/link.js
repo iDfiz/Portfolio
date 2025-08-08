@@ -79,19 +79,19 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("project-warn").textContent = data.warn;
 
   // Таймер обратного отсчёта
+  const params = new URLSearchParams(window.location.search);
+
   let seconds = 10;
-  const baseURL = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/';
   const timerEl = document.getElementById("timer");
 
   const interval = setInterval(() => {
-    seconds--;
-    timerEl.textContent = seconds;
+      seconds--;
+      timerEl.textContent = seconds;
 
-    if (seconds <= 0) {
-      clearInterval(interval);
-      window.open(project.url, '_blank');
-      window.location.href = baseURL + "index.html";
-    }
+      if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = project.url; // Меняем текущую вкладку link.html на интернет-магазин
+      }
   }, 1000);
 
   // Анимация и появление элементов
