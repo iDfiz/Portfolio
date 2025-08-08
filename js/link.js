@@ -54,8 +54,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const lang = localStorage.getItem('lang') || 'en';
 
   // Получаем projectKey из параметров URL, например: link.html?project=online-store
-  const urlParams = new URLSearchParams(window.location.search);
-  const projectKey = urlParams.get('project');
+  const params = new URLSearchParams(window.location.search);
+  const projectKey = params.get('project');
 
   if (!projectKey || !projects[projectKey]) {
     // Если проект не найден
@@ -79,15 +79,13 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("project-warn").textContent = data.warn;
 
   // Таймер обратного отсчёта
-  const params = new URLSearchParams(window.location.search);
-
   let seconds = 10;
   const timerEl = document.getElementById("timer");
 
   const interval = setInterval(() => {
       seconds--;
       timerEl.textContent = seconds;
-
+      console.log('Redirecting to', project.url);
       if (seconds <= 0) {
           clearInterval(interval);
           window.location.href = project.url; // Меняем текущую вкладку link.html на интернет-магазин
