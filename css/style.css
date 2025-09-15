@@ -67,8 +67,14 @@ body
     background-color: var(--colorBox);
     border-radius: 20px;
     padding: 10px;
+    border: 0;
+    outline: none;
     overflow: hidden;
     box-shadow: 0 15px 15px 0 var(--black);
+}
+.box_skills
+{
+    cursor: pointer;
 }
 .box_hero
 {

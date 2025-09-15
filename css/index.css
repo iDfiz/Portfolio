@@ -246,6 +246,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 10px;
     background-color: var(--darkAqua);
     border-radius: 20px;
 }
