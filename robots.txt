@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://idfiz.github.io/Portfolio//sitemap.xml
+Sitemap: https://idfiz.github.io/Portfolio/sitemap.xml
