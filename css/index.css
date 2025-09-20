@@ -417,6 +417,10 @@
     {
         gap: 20px;
     }
+    .modal .modal-right
+    {
+        display: none;
+    }
     .modal .modal-right img
     {
         display: none;
