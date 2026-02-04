@@ -76,6 +76,10 @@ body
 {
     cursor: pointer;
 }
+.box_skills:hover
+{
+    background-color: var(--aqua);
+}
 .box_hero
 {
     opacity: 0;
@@ -91,7 +95,6 @@ body
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s ease;
-    transition-delay: var(--delay, 0s);
 }
 .box_contacts
 {
