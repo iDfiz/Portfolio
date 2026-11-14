@@ -125,6 +125,7 @@ body
 }
 .btn
 {
+    text-wrap: nowrap;
     padding: 10px 20px;
     background-color: var(--aqua);
     border-radius: 10px;

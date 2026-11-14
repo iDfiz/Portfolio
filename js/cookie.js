@@ -1,0 +1,1 @@
+document.cookie = "theme=dark; path=/; max-age=31536000";

@@ -1,6 +1,7 @@
 body
 {
-    overflow-y: hidden;
+    overflow-y: auto;
+    padding: 100px 0;
 }
 .project
 {
@@ -89,7 +90,8 @@ li::marker
 }
 .skills
 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
     gap: 20px;
     margin: 20px 0;

@@ -18,7 +18,30 @@ const projects = {
       description_list4: "page navigation without reloads (SPA)",
       warn: "This store does not sell real products and is intended solely to demonstrate functionality and design. All brands are fictional and product images are AI-generated.",
     },
+    skills: ["react", "vite", "js", "html"],
     url: "https://idfiz.github.io/Online-Store/"
+  },
+  "tournaments-bracket": {
+    ru: {
+      title: "Библиотека для создания турнирных сеток",
+      description: "Это библиотека для разработчиков, предназначенная для быстрого создания и отображения турнирных сеток",
+      description_list1: "автоматическая генерация сеток на основе количества участников",
+      description_list2: "поддержка различных форматов турниров и пользовательской структуры раундов",
+      description_list3: "гибкая настройка внешнего вида: цвета, размеры, линии и оформление победителей и проигравших",
+      description_list4: "интеграция в проекты на React с возможностью адаптации под собственный дизайн",
+      warn: "Библиотека предназначена для упрощения работы с турнирными сетками и может использоваться в игровых, спортивных, киберспортивных и других проектах."
+    },
+    en: {
+      title: "Library for Creating Tournament Brackets",
+      description: "A developer-oriented library designed to quickly create and display tournament brackets",
+      description_list1: "automatic bracket generation based on the number of participants",
+      description_list2: "support for various tournament formats and custom round structures",
+      description_list3: "flexible appearance customization: colors, sizes, lines, and winner and loser styling",
+      description_list4: "integration into React projects with the ability to adapt the design to your own style",
+      warn: "The library is designed to simplify working with tournament brackets and can be used in gaming, sports, esports, and other projects."
+    },
+    skills: ["react", "vite", "js", "ts", "html", "css", "npm", "i18n", "github"],
+    url: "https://idfiz.github.io/Tournaments-Bracket/"
   },
 };
 
@@ -69,6 +92,30 @@ window.addEventListener('DOMContentLoaded', () => {
   const project = projects[projectKey];
   const data = project[lang];
 
+// Генерация стека технологий проекта
+function renderProjectSkills(skills) {
+    const container = document.getElementById("project-skills");
+
+    container.innerHTML = "";
+
+    skills.forEach((skill, i) => {
+        const box = document.createElement("div");
+        box.className = "box_skills";
+        box.style.padding = "30px";
+        box.style.setProperty('--delay', `${i * 0.1}s`);
+
+        const img = document.createElement("img");
+        img.src = `img/icons/${document.body.classList.contains('light-theme') ? 'black' : 'white'}/${skill}.png`;
+        img.alt = skill;
+        img.dataset.icon = skill;
+
+        box.appendChild(img);
+        container.appendChild(box);
+
+        setTimeout(() => box.classList.add("show"), i * 100);
+    });
+}
+
   // Заполняем контент
   document.getElementById("project-title").textContent = data.title;
   document.getElementById("project-description").textContent = data.description;
@@ -76,6 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById("project-description_list2").textContent = data.description_list2;
   document.getElementById("project-description_list3").textContent = data.description_list3;
   document.getElementById("project-description_list4").textContent = data.description_list4;
+  renderProjectSkills(project.skills || []);
   document.getElementById("project-warn").textContent = data.warn;
 
   // Таймер обратного отсчёта
